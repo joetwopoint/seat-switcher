@@ -1,4 +1,4 @@
-# Seat-Shuffle
+# Seat-Switcher
 
 Updated / optimized seat switching resource inspired by **GoatG33k/seat-switcher** (MIT licensed).
 
@@ -15,7 +15,7 @@ Updated / optimized seat switching resource inspired by **GoatG33k/seat-switcher
 1. Place folder in your server `resources` directory.
 2. Add to `server.cfg`:
    ```
-   ensure TwoPoint_SeatSwitcher
+   ensure seat-switcher
    ```
 3. Restart resource or server.
 
