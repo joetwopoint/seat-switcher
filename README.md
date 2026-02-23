@@ -1,4 +1,4 @@
-# TwoPoint_SeatSwitcher (TwoPoint Development)
+# Seat-Shuffle
 
 Updated / optimized seat switching resource inspired by **GoatG33k/seat-switcher** (MIT licensed).
 
