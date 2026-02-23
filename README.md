@@ -1,28 +1,45 @@
-# seat-switcher - 1.1.0
-This is a very simple client-side script that is a modern version of the "[Disable Seat Shuffling](https://forum.cfx.re/t/release-disable-seat-shuffling/53526)" plugin by _callmejaf_.
+# TwoPoint_SeatSwitcher (TwoPoint Development)
 
-This release fixes some of the most common bugs with it, such as:
-- The seat shuffle animation no longer loops / does partial animations
-- Door closing animation works properly now
+Updated / optimized seat switching resource inspired by **GoatG33k/seat-switcher** (MIT licensed).
+
+## What this version adds
+- ✅ Prevents auto seat shuffle (front passenger -> driver)
+- ✅ `/seat` command (switch seats while inside vehicle)
+- ✅ `/shuff` and `/shuffle` commands (temporary shuffle override)
+- ✅ **Door-based seat entry**:
+  - Walk to any door
+  - Press **F**
+  - Enters the seat for that door instead of always trying driver seat
+
+## Install
+1. Place folder in your server `resources` directory.
+2. Add to `server.cfg`:
+   ```
+   ensure TwoPoint_SeatSwitcher
+   ```
+3. Restart resource or server.
 
 ## Commands
+- `/seat 0` = driver
+- `/seat 1` = front passenger
+- `/seat 2` = rear left
+- `/seat 3` = rear right
+- `/seat driver`, `/seat passenger`, `/seat rl`, `/seat rr`
+- `/shuff` or `/shuffle` = temporarily allow shuffle to driver seat
 
-### `/seat [seat]`
-This command will switch your character's seat to the desired seat.
+## Notes
+- Works best on standard vehicles with proper door bones.
+- Bikes, some special vehicles, and some custom models may not support full door-seat detection.
+- If a target seat is occupied, behavior is controlled by `Config.FallbackToNearestFreeSeat`.
 
-### `/shuffle` (or `/shuff`)
-This command lets the player shuffle to the driver seat.
+## Config
+Open `config.lua` and adjust:
+- Entry radius / door select distance
+- Cooldown timing
+- Fallback behavior
+- Notifications
+- Command aliases / keybind defaults
 
-## Changelog
-
-### 1.1.0
-- Added `/shuffle` as a command alias
-- Use a better method of preventing seat shuffling
-
-### 1.0.0
-- Initial version
-
-
-## License
-This script is licensed under the MIT license. Have fun. The license details are available in the **LICENSE** file.
-
+## License / Credit
+- Original concept/source fork target: GoatG33k `seat-switcher` (MIT)
+- This package is a TwoPoint Development styled update/customization
